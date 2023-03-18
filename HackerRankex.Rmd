@@ -1,0 +1,132 @@
+---
+title: "HackerRank R"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1.
+Given an integer, n, perform the following conditional actions:
+
+If n is odd, print Weird
+If n is even and in the inclusive range of 2 to 5, print Not Weird
+If n is even and in the inclusive range of 6 to 20, print Weird
+If n is even and greater than 20, print Not Weird
+
+
+```{r }
+f <- function(n) {
+  if (n%%2 == 1) {
+    print("Weird")
+  } else 
+      if (n%%2 == 0 & n>=2 & n<=5) {
+        print("Not Weird")
+  }
+      else if (n%%2 == 0 & n>=6 & n<=20) {
+      print("Weird")
+    }
+      else if (n%%2 == 0 & n>20) {
+       print("Not Weird")
+  }
+      else  {
+       print("Wrong")
+  }
+  
+}
+
+f(8)
+```
+
+## 2
+
+The provided code stub reads two integers from STDIN, a and b. 
+  Add code to print three lines where:
+  The first line contains the sum of the two numbers.
+  The second line contains the difference of the two numbers (first  second).
+  The third line contains the product of the two numbers.
+
+```{r }
+f2 <- function(a, b) {
+  print(a + b)
+  print(a - b)
+  print(a * b)
+}
+
+f2(3, 5)
+```
+
+## 3
+
+The provided code stub reads two integers, a and b, from STDIN.
+Add logic to print two lines. The first line should contain the result of integer division,  a// b. The second line should contain the result of float division, a / b.
+No rounding or formatting is necessary.
+
+```{r}
+f3 <- function(a, b) {
+  print(trunc(a/b))
+  print(a/b)
+}
+
+f3(3, 5)
+```
+
+## 4
+
+The provided code stub reads and integer, n, from STDIN. For all non-negative integers i < n, print i^2.
+
+```{r}
+f4 <- function(n) {
+  for (i in 0:n){
+     print(i*i)
+    }
+}
+
+f4(5)
+```
+
+## 5
+
+Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean True, otherwise return False.
+
+Note that the code stub provided reads from STDIN and passes arguments to the is_leap function. It is only necessary to complete the is_leap function.
+
+```{r}
+f5 <- function(year) {
+  if (year %% 4 == 0){
+    "True"
+  } else {
+     if (year %% 100 == 0 & year %% 400 == 0) {
+      "True"
+     }
+     else {
+       "False"
+     }
+  }
+}
+
+f5(1990)
+```
+
+## 6
+
+The included code stub will read an integer, n, from STDIN. Without using any string methods, try to print the following:
+
+123...n
+
+Note that "..." represents the consecutive values in between.
+
+```{r}
+f6 <- function(n)  {
+  for (i in 1:n) {
+    cat(paste(i,""))
+  }
+}
+
+f6(3)
+```
+
+
+
+
